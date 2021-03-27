@@ -12,11 +12,16 @@ def calc_macd2(df):
     macd = calc_macd(df)
     macd_sig = calc_sma(macd, 9)
     return macd - macd_sig
-
+def mavol(df):
+    VOL1 = calc_vol(df, 1)
+    MAVOL1 = calc_vol(df, 3)
+    MAVOL1 = calc_vol(df, 7)
+    MAVOL1 = calc_vol(df, 13)
 
 def calc_ema(df, span):
     return df.ewm(span=span, adjust=False).mean()
-
+def calc_vol(df, span):
+    return df.ewm(span=span, adjust=False).mean()
 
 def calc_regression_line_slope(data):
     """
