@@ -53,6 +53,7 @@ V6= (df6["Volume"])/1.1
 per = dif1 / mean6
 Vd6 = (df6["Volume"])/1.1
 #########next day###############
+#########you can change the percentage and difference value based on your experience######
 df7=df.loc[6, :]
 dif4 = df7["Close"] - df7["Open"]
 mean7 = (df7["Open"] + df7["Close"])/2
